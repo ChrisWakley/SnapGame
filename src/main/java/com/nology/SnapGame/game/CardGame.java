@@ -29,6 +29,7 @@ public class CardGame {
         return CardGame.deck;
     }
 
+    //dealCard method to allow players to draw a card.
     public Card dealCard(ArrayList<Card> playDeck) {
         Card inPlay = deck.get(0);
         CardGame.playDeck.add(inPlay);
@@ -37,17 +38,20 @@ public class CardGame {
         return inPlay;
     }
 
+    //shuffleDeck method to randomise the deck (shuffle the deck)
     public ArrayList<Card> shuffleDeck(ArrayList<Card> deck) {
         Collections.shuffle(deck);
         System.out.println(deck);
         return deck;
     }
 
+    //method to sort the deck by value (face value of cards in order)
     public ArrayList<Card> sortDeckByValue(ArrayList<Card> deck) {
         deck.sort(Comparator.comparing(Card::getValue));
         return deck;
     }
 
+    //method to sort the deck by suit (suit of cards)
     public ArrayList<Card> sortDeckBySuit(ArrayList<Card> deck) {
         deck.sort(Comparator.comparing(Card::getSuit));
         return deck;
