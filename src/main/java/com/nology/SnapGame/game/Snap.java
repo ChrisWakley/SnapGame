@@ -2,8 +2,6 @@ package com.nology.SnapGame.game;
 
 import java.util.Scanner;
 
-import static com.nology.SnapGame.game.TextInterraction.nameOne;
-
 public class Snap extends CardGame {
 
     private final Scanner scanner = new Scanner(System.in);
@@ -15,14 +13,12 @@ public class Snap extends CardGame {
     public void playSnap() {
 
         while (card < 52) {
-            shuffleDeck();
             String input = scanner.nextLine();
+            String playerOne = TextInterraction.playerOne;
             if (input.isEmpty()) {
-                dealCard();
-
-                System.out.println(nameOne + " has taken a turn.");
+                dealCard(playDeck);
+                System.out.println(playerOne + " has taken a turn.");
             }
         }
     }
-
 }
