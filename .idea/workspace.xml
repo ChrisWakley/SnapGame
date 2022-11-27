@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4711166c-6c46-464c-873f-33c35319d55a" name="Changes" comment="Game ends when a snap occurs.&#10;Two player mode in progress.">
+    <list default="true" id="4711166c-6c46-464c-873f-33c35319d55a" name="Changes" comment="Two player mode works. bugs from last commit fixed. need to implement snap input for win condition.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nology/SnapGame/game/CardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nology/SnapGame/game/CardGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nology/SnapGame/game/Snap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nology/SnapGame/game/Snap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nology/SnapGame/game/TextInterraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nology/SnapGame/game/TextInterraction.java" afterDir="false" />
     </list>
@@ -120,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669405169152</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Two player mode works. bugs from last commit fixed. need to implement snap input for win condition.">
+      <created>1669575805743</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669575805743</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -139,6 +145,7 @@
     <MESSAGE value="PlayerOne name passes to the correct outputs. Sort deck methods all work." />
     <MESSAGE value="Game ends when a snap occurs." />
     <MESSAGE value="Game ends when a snap occurs.&#10;Two player mode in progress." />
-    <option name="LAST_COMMIT_MESSAGE" value="Game ends when a snap occurs.&#10;Two player mode in progress." />
+    <MESSAGE value="Two player mode works. bugs from last commit fixed. need to implement snap input for win condition." />
+    <option name="LAST_COMMIT_MESSAGE" value="Two player mode works. bugs from last commit fixed. need to implement snap input for win condition." />
   </component>
 </project>

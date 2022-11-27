@@ -28,8 +28,8 @@ public class TextInterraction {
 
         if(choice.equals("snap") ) {
             System.out.println("(☞ﾟヮﾟ)☞  Welcome to Snap!  ☜(ﾟヮﾟ☜) \n\n" + playerOne +
-                    " Press enter to draw the first card. \n\nTake turns drawing cards, if you get a snap on your turn enter 'snap' in the text field within " +
-                    "2 seconds to win the game, if you run out of time you will lose!" );
+                    " Press enter to draw the first card. \n\nTake turns drawing cards, if you get a snap \non your turn enter 'snap' in the text field \nwithin " +
+                    "2 seconds to win the game, \nif you run out of time you will lose!" );
         } else if (choice.equals("quit") ) {
             System.out.println("Quitting game...");
             scanner.close();
@@ -37,7 +37,7 @@ public class TextInterraction {
             System.out.println("Please input a valid response.");
         } return true;
     }
-
+    //asks the player for input to answer if they wish to play again.
     public boolean rerun() {
         Scanner userReply = new Scanner(System.in);
         System.out.println("Press any key to play again. Press N to exit game.");

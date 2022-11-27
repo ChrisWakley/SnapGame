@@ -1,5 +1,7 @@
 package com.nology.SnapGame.game;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -8,7 +10,6 @@ public class Snap extends CardGame {
     private final Scanner scanner = new Scanner(System.in);
     protected int card = 0;
     protected boolean flag = true;
-
 
     public Snap() {
 
@@ -43,6 +44,8 @@ public class Snap extends CardGame {
                     } else {
                         System.out.println(playerTwo + "'s turn!");
                     }
+                } else {
+                    System.out.println("This input does not accept text entry. please leave it \nblank and press 'enter' to take a turn.");
                 }
             }
             else if (!flag) {
@@ -62,6 +65,8 @@ public class Snap extends CardGame {
                     } else {
                         System.out.println(playerOne + "'s turn!");
                     }
+                } else {
+                    System.out.println("This input does not accept text entry. please leave it \nblank and press 'enter' to take a turn.");
                 }
             }
         }
