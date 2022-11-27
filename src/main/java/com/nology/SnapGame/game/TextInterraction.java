@@ -2,10 +2,14 @@ package com.nology.SnapGame.game;
 
 import java.util.Scanner;
 
+import static com.nology.SnapGame.game.CardGame.deck;
+import static com.nology.SnapGame.game.CardGame.playDeck;
+
 public class TextInterraction {
 
     public static String playerOne;
     public static String playerTwo;
+    protected static boolean replay;
 
     public boolean welcome () {
 
@@ -32,5 +36,22 @@ public class TextInterraction {
         } else {
             System.out.println("Please input a valid response.");
         } return true;
+    }
+
+    public boolean rerun() {
+        Scanner userReply = new Scanner(System.in);
+        System.out.println("Press any key to play again. Press N to exit game.");
+        String response = userReply.nextLine().toLowerCase();
+        if (!response.equals("n")) {
+            replay = true;
+            System.out.println("Game reset, press enter to draw a new card.");
+        } else {
+            replay = false;
+            deck.clear();
+            playDeck.clear();
+            System.out.println("game exit");
+            userReply.close();
+        }
+        return true;
     }
 }

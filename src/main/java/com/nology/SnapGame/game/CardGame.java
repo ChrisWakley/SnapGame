@@ -41,7 +41,7 @@ public class CardGame {
     //shuffleDeck method to randomise the deck (shuffle the deck)
     public ArrayList<Card> shuffleDeck(ArrayList<Card> deck) {
         Collections.shuffle(deck);
-        System.out.println(deck);
+//        System.out.println(deck);
         return deck;
     }
 
@@ -57,19 +57,25 @@ public class CardGame {
         return deck;
     }
 
+    public static boolean replay = TextInterraction.replay;
+
     public static void main(String[] args) {
 
-        TextInterraction textInterraction = new TextInterraction();
-        System.out.println(textInterraction.welcome() );
+            TextInterraction textInterraction = new TextInterraction();
+            System.out.println(textInterraction.welcome());
 
-        CardGame cards = new CardGame();
+        do {
+            replay = true;
+            CardGame cards = new CardGame();
 
-        cards.shuffleDeck(deck);
-        System.out.println(playDeck);
+            cards.shuffleDeck(deck);
+            System.out.println(playDeck);
 
-        Snap snap = new Snap();
-        snap.playSnap();
+            Snap snap = new Snap();
+            snap.playSnap();
 
+            TextInterraction endInterraction = new TextInterraction();
+            System.out.println(endInterraction.rerun());
+        } while (replay);
     }
-
 }
