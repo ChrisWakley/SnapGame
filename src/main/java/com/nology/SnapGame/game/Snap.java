@@ -1,8 +1,5 @@
 package com.nology.SnapGame.game;
 
-import org.w3c.dom.ls.LSOutput;
-
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Snap extends CardGame {
@@ -17,17 +14,16 @@ public class Snap extends CardGame {
 
     public void playSnap() {
 
-        while (card < 52) {
+        while (card <= 52) {
             String input = scanner.nextLine();
             String playerOne = TextInterraction.playerOne;
             String playerTwo = TextInterraction.playerTwo;
-            if(card == 52) {
+            if (card == 52) {
+                System.out.println("The game ended in a tie!");
                 deck.clear();
                 playDeck.clear();
-                System.out.println("The game ended in a tie!");
                 return;
-            }
-            else if (flag) {
+            } else if (flag) {
                 if (input.isEmpty()) {
                     dealCard(playDeck);
                     card++;
@@ -37,18 +33,28 @@ public class Snap extends CardGame {
                     flag = false;
 
                     if (CardGame.playDeck.size() > 1 && CardGame.playDeck.get(CardGame.playDeck.size() - 1).getValue() == CardGame.playDeck.get(CardGame.playDeck.size() - 2).getValue()) {
-                        deck.clear();
-                        playDeck.clear();
-                        System.out.println("SNAP! " + playerOne + " wins the game!");
-                        return;
-                    } else {
-                        System.out.println(playerTwo + "'s turn!");
+                        System.out.println("enter SNAP to win!");
+                        long startTimer = System.currentTimeMillis();
+                        String snapInput = scanner.next().toLowerCase();
+                        long stopTimer = System.currentTimeMillis();
+                        long reactTime = stopTimer - startTimer;
+                        if (snapInput.equals("snap") && reactTime < 3000) {
+                            deck.clear();
+                            playDeck.clear();
+                            System.out.println("SNAP! " + playerOne + " wins the game!");
+                            System.out.println("Reaction time was: " + (reactTime / 1000) + " seconds.\n");
+                            return;
+                        } else if (reactTime >= 3000) {
+                            System.out.println(playerOne + "'s reaction time was: " + (reactTime / 1000) + " seconds.");
+                            System.out.println(playerOne + " has missed their opportunity to win, the game will continue.\n");
+                        } else {
+                            System.out.println(playerTwo + "'s turn!");
+                        }
                     }
                 } else {
                     System.out.println("This input does not accept text entry. please leave it \nblank and press 'enter' to take a turn.");
                 }
-            }
-            else if (!flag) {
+            } else if (!flag) {
                 if (input.isEmpty()) {
                     dealCard(playDeck);
                     card++;
@@ -58,12 +64,23 @@ public class Snap extends CardGame {
                     flag = true;
 
                     if (CardGame.playDeck.size() > 1 && CardGame.playDeck.get(CardGame.playDeck.size() - 1).getValue() == CardGame.playDeck.get(CardGame.playDeck.size() - 2).getValue()) {
-                        deck.clear();
-                        playDeck.clear();
-                        System.out.println("SNAP! " + playerTwo + " wins the game!");
-                        return;
-                    } else {
-                        System.out.println(playerOne + "'s turn!");
+                        System.out.println("enter SNAP to win!");
+                        long startTimer = System.currentTimeMillis();
+                        String snapInput = scanner.next().toLowerCase();
+                        long stopTimer = System.currentTimeMillis();
+                        long reactTime = stopTimer - startTimer;
+                        if (snapInput.equals("snap") && reactTime < 3000) {
+                            deck.clear();
+                            playDeck.clear();
+                            System.out.println("SNAP! " + playerTwo + " wins the game!");
+                            System.out.println("Reaction time was: " + (reactTime / 1000) + " seconds.\n");
+                            return;
+                        } else if (reactTime >= 3000) {
+                            System.out.println(playerTwo + "'s reaction time was: " + (reactTime / 1000) + " seconds.");
+                            System.out.println(playerTwo + " has missed their opportunity to win, the game will continue.\n");
+                        } else {
+                            System.out.println(playerOne + "'s turn!");
+                        }
                     }
                 } else {
                     System.out.println("This input does not accept text entry. please leave it \nblank and press 'enter' to take a turn.");
@@ -72,3 +89,6 @@ public class Snap extends CardGame {
         }
     }
 }
+
+
+

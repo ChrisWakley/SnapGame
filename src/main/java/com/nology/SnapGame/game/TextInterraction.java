@@ -29,10 +29,10 @@ public class TextInterraction {
         if(choice.equals("snap") ) {
             System.out.println("(☞ﾟヮﾟ)☞  Welcome to Snap!  ☜(ﾟヮﾟ☜) \n\n" + playerOne +
                     " Press enter to draw the first card. \n\nTake turns drawing cards, if you get a snap \non your turn enter 'snap' in the text field \nwithin " +
-                    "2 seconds to win the game, \nif you run out of time you will lose!" );
+                    "3 seconds to win the game, \nif you run out of time you will lose!" );
         } else if (choice.equals("quit") ) {
             System.out.println("Quitting game...");
-            scanner.close();
+            System.exit(0);
         } else {
             System.out.println("Please input a valid response.");
         } return true;
@@ -45,13 +45,14 @@ public class TextInterraction {
         if (!response.equals("n")) {
             replay = true;
             System.out.println("Game reset, press enter to draw a new card.");
+            return true;
         } else {
             replay = false;
             deck.clear();
             playDeck.clear();
             System.out.println("game exit");
-            userReply.close();
+            System.exit(0);
+            return false;
         }
-        return true;
     }
 }
