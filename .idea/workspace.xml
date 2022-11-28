@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4711166c-6c46-464c-873f-33c35319d55a" name="Changes" comment="Minor text edits and bugfixes.">
+    <list default="true" id="4711166c-6c46-464c-873f-33c35319d55a" name="Changes" comment="Project complete.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nology/SnapGame/game/Snap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nology/SnapGame/game/Snap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nology/SnapGame/game/TextInterraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nology/SnapGame/game/TextInterraction.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +132,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669584343259</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Project complete.">
+      <created>1669654001487</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669654001487</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Project complete.">
+      <created>1669654067949</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669654067949</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -154,6 +167,7 @@
     <MESSAGE value="Game ends when a snap occurs.&#10;Two player mode in progress." />
     <MESSAGE value="Two player mode works. bugs from last commit fixed. need to implement snap input for win condition." />
     <MESSAGE value="Minor text edits and bugfixes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor text edits and bugfixes." />
+    <MESSAGE value="Project complete." />
+    <option name="LAST_COMMIT_MESSAGE" value="Project complete." />
   </component>
 </project>

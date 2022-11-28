@@ -33,6 +33,7 @@ public class Snap extends CardGame {
                     flag = false;
 
                     if (CardGame.playDeck.size() > 1 && CardGame.playDeck.get(CardGame.playDeck.size() - 1).getValue() == CardGame.playDeck.get(CardGame.playDeck.size() - 2).getValue()) {
+                        flag = true;
                         System.out.println("enter SNAP to win!");
                         long startTimer = System.currentTimeMillis();
                         String snapInput = scanner.next().toLowerCase();
@@ -47,9 +48,9 @@ public class Snap extends CardGame {
                         } else if (reactTime >= 3000) {
                             System.out.println(playerOne + "'s reaction time was: " + (reactTime / 1000) + " seconds.");
                             System.out.println(playerOne + " has missed their opportunity to win, the game will continue.\n");
-                        } else {
-                            System.out.println(playerTwo + "'s turn!");
                         }
+                    } else {
+                        System.out.println(playerTwo + "'s turn!");
                     }
                 } else {
                     System.out.println("This input does not accept text entry. please leave it \nblank and press 'enter' to take a turn.");
@@ -64,6 +65,7 @@ public class Snap extends CardGame {
                     flag = true;
 
                     if (CardGame.playDeck.size() > 1 && CardGame.playDeck.get(CardGame.playDeck.size() - 1).getValue() == CardGame.playDeck.get(CardGame.playDeck.size() - 2).getValue()) {
+                        flag = false;
                         System.out.println("enter SNAP to win!");
                         long startTimer = System.currentTimeMillis();
                         String snapInput = scanner.next().toLowerCase();
@@ -78,9 +80,9 @@ public class Snap extends CardGame {
                         } else if (reactTime >= 3000) {
                             System.out.println(playerTwo + "'s reaction time was: " + (reactTime / 1000) + " seconds.");
                             System.out.println(playerTwo + " has missed their opportunity to win, the game will continue.\n");
-                        } else {
-                            System.out.println(playerOne + "'s turn!");
                         }
+                    } else {
+                        System.out.println(playerOne + "'s turn!");
                     }
                 } else {
                     System.out.println("This input does not accept text entry. please leave it \nblank and press 'enter' to take a turn.");
