@@ -6,3 +6,4 @@ public class Player {
     public String playerTwo = TextInterraction.playerTwo;
 
 }
+
